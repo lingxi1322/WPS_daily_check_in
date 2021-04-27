@@ -5,8 +5,8 @@ import requests
 
 
 sids = [
-    "V02Sw9-goMQAxyEQu_EULMetb-INZo000af1142c00479959d8",
-    "V02S0R96lUd8ZEzQtyjxZX-kHQ2_tpk00a28f1650047c345ee",
+    "V02S4cFEvr_v9QZAErfUGevrhytGWE800ab7d4190046484fde",
+    "V02S96aSosktKJiRKwEwBhqiWKHhxkE00a01300600374985fe",
     "V02SBxbHOhf4rcYlBaXzTfJ8WC3B6PE00aa5f34d0038de5bac",
     "V02SRvwTFf68enT4JrOPhQkKrKKqv5k00ab38f8500380673c8",
     "V02SS1Aj322-C9Z-P36iZF2epL78zOQ00a7ea26400300425d3",
@@ -22,7 +22,7 @@ mk = 0
 
 def request_re(sid, invite_userid, rep = 31):
     invite_url = 'http://zt.wps.cn/2018/clock_in/api/invite'
-    r = requests.post( invite_url, headers={ 'sid': sid }, data={ 'invite_userid': invite_userid, "client_code": "d32d04c5084a4f6ba1b5f8bee92fWX85", "client": "alipay" } )
+    r = requests.post( invite_url, headers={ 'sid': sid }, data={ 'invite_userid': invite_userid, "client_code": "0517ux000QyKBL1t6X200SCdjN17ux02", "client": "wechat" } )
     js = json.loads(r.content)
     if js['msg'] == 'tryLater' and rep > 0:
         rep -= 1
